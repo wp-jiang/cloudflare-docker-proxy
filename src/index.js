@@ -171,3 +171,16 @@ function responseUnauthorized(url) {
     headers: headers,
   });
 }
+
+
+import DOCS from './help.html'
+ 
+// return docs
+if (url.pathname === "/") {
+  return new Response(DOCS, {
+    status: 200,
+    headers: {
+      "content-type": "text/html"
+    }
+  });
+}
